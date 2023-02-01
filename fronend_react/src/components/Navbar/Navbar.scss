@@ -79,6 +79,34 @@
     }
 
 }
+.app__navbar-resume{
+        padding: 1rem 2rem;
+        border: var(--white-color);
+        border-radius: 15px;
+        flex-direction: row;
+        width: auto;
+        background-color: rgb(10, 94, 127);
+
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+        flex-direction: column;
+        margin-top: 0rem;
+
+        a {
+            color: white;
+            text-decoration: none;
+            flex-direction: column;
+
+            text-transform: uppercase;
+            font-weight: 500;
+
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+}
 
 .app__navbar-menu{
     width:35px;

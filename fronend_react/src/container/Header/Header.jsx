@@ -32,10 +32,13 @@ const Header = () => {
                         <div style={{ marginLeft:20}}>
                             <p className='p-text'>Hello, I am</p>
                             <h1 className='head-text'>Halisa</h1>
+
                         </div>
                     </div>
                     <div className="tag-cmp app__flex">
                         <p className='p-text'>Full Stack Software Developer</p>
+                        {/* <a href='https://www.linkedin.com/in/lisa-s-a155a5202/'>Resume</a> */}
+
                     </div>
                 </div>
             </motion.div>
