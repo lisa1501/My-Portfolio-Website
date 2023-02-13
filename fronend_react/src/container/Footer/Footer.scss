@@ -28,7 +28,6 @@
         border-radius: 10px;
         cursor: pointer;
         background-color: #fef4f5;
-
         transition: all 0.3s ease-in-out;
 
         img {
@@ -40,10 +39,12 @@
         p {
             font-weight: 500;
         }
+
         a {
             text-decoration: none;
             font-weight: 500;
         }
+
         &:hover {
             box-shadow: 0 0 25px #fef4f5;
         }
@@ -73,12 +74,10 @@
 
     div {
         width: 100%;
-
         margin: 0.75rem 0;
         border-radius: 10px;
         cursor: pointer;
         background-color: var(--primary-color);
-
         transition: all 0.3s ease-in-out;
 
         input,

@@ -35,11 +35,11 @@
     flex: 1;
     display: flex;
     justify-content: center;
-
+    
     list-style: none;
 
     li {
-        margin: 0 1rem;
+        margin: 0 2rem;
         cursor: pointer;
 
         flex-direction: column;
@@ -57,9 +57,10 @@
             color: var(--gray-color);
             text-decoration: none;
             flex-direction: column;
+            font-size: 15px;
 
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 600;
 
             transition: all 0.3s ease-in-out;
 
@@ -80,27 +81,17 @@
 
 }
 .app__navbar-resume{
-        padding: 1rem 2rem;
-        border: var(--white-color);
+        padding: 0.05rem 1.5rem;
         border-radius: 15px;
-        flex-direction: row;
-        width: auto;
-        background-color: rgb(10, 94, 127);
+        background-color: var(--secondary-color);
+        cursor: pointer;
+        margin-top: 1rem;
 
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
 
-        flex-direction: column;
-        margin-top: 0rem;
-
-        a {
+        p {
             color: white;
-            text-decoration: none;
-            flex-direction: column;
-
             text-transform: uppercase;
-            font-weight: 500;
-
-            transition: all 0.3s ease-in-out;
+    
 
             &:hover {
                 color: var(--primary-color);
@@ -113,7 +104,7 @@
     height: 35px;
     border-radius: 50%;
     position: relative;
-
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +171,6 @@
                     font-weight: 500;
                     transition: all 0.3s ease-in-out;
 
-
                     &:hover {
                         color: var(--secondary-color);
                     }
@@ -189,12 +179,11 @@
         }
         @media screen and (min-width: 900px) {
             display: none;
-            
         }
     }
     @media screen and (min-width: 900px) {
         display: none;
-        
     }
+    
     
 }

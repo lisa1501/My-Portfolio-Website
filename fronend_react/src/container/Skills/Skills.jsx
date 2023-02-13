@@ -1,7 +1,5 @@
 import React,{ useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
-// import ReactTooltip from 'react-tooltip';
 import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 

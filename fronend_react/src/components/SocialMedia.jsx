@@ -1,7 +1,5 @@
 import React from 'react';
-import { BsTwitter, BsLinkedin,BsGithub } from 'react-icons/bs';
-import { FaFacebookF } from 'react-icons/fa';
-
+import {  BsLinkedin,BsGithub } from 'react-icons/bs';
 
 
 const SocialMedia = () => {
@@ -19,12 +17,6 @@ const SocialMedia = () => {
             </div>
             <div>
                 <BsGithub onClick={onClickUrl('https://github.com/lisa1501')}/>
-            </div>
-            <div>
-                <BsTwitter />
-            </div>
-            <div>
-                <FaFacebookF />
             </div>
             
         </div>

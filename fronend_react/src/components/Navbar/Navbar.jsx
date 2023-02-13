@@ -8,33 +8,32 @@ import './Navbar.scss';
 const Navbar = () => {
     
     const [toggle, setToggle] = useState(false)
+    
+    const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
+    const onClickUrl = (url) => {
+        return () => openInNewTab(url)
+    }
     return (
         <nav className='app__navbar'>
             <div className='app__navbar-logo'>
                 <img src={images.logo} alt="logo"/>
-                
-                
             </div>
-            
             <ul className='app__navbar-links'>
                 {['home','about','work','skills','contact'].map((item)=>(
                     <li className='app__flex p-text'  key={`link-${item}`}>
-                        {/* <div /> */}
+                        <div />
                         
                         <a href={`#${item}`}>{item}</a>
                     </li>
-                    
-
-                    
                 ))}
-                
             </ul>
-            <div className="app__navbar-resume">
-                <a style={{display: "table-cell"}} href='https://www.linkedin.com/in/lisa-s-a155a5202/' target="_blank"><p>Download Resume</p></a>
-                        
-            </div>
-                
             
+            <div className="app__navbar-resume">
+                <p onClick={onClickUrl('https://drive.google.com/file/d/1wynVV4XClTFD-apDESg4Huk2GHLJ92DV/view?usp=sharing')}>Resume</p>
+            </div>
             <div className='app__navbar-menu'>
                     <HiMenuAlt4 onClick={()=>setToggle(true)}/>
                     {toggle && (
@@ -50,12 +49,10 @@ const Navbar = () => {
                                 </li>
                             ))}
                             </ul>
-                            
                         </motion.div>
                     )}
             </div>
         </nav>
-        
     );
 };
 

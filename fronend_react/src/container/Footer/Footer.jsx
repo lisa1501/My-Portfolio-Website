@@ -46,12 +46,14 @@ const Footer = () => {
                         halisasaipulla@gmail.com
                     </a>
                 </div>
+
                 <div className='app__footer-card'>
                     <img src={images.mobile} alt="mobile" />
                     <a href='tel: +1 (123) 456-789' className='p-text'>
                             +1 (123) 456-789
                     </a>
                 </div>
+
             </div>
             {!isFormSubmitted ? (
             <div className='app__footer-form app__flex'>
@@ -77,21 +79,20 @@ const Footer = () => {
                 <button 
                     type="button" className="p-text" 
                     onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
-
+            </div>
+            ) : (
+                <div>
+                    <h3 className="head-text">
+                        Thank you for getting in touch!
+                    </h3>
                 </div>
-                ) : (
-                    <div>
-                        <h3 className="head-text">
-                            Thank you for getting in touch!
-                        </h3>
-                    </div>
-                    )}
-                </>
-            );
-        };
+            )}
+        </>
+    );
+};
 
 export default AppWrap(
     MotionWrap(Footer, 'app__footer'),
     'contact',
-    'app__primarybg',
+    'app__whitebg',
     );
