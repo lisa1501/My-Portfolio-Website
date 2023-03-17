@@ -13,9 +13,12 @@ const Skills = () => {
     const [experiences, setExperiences] = useState([]);
     const [skills, setSkills] = useState([]);
 
+
+
     useEffect(() =>{
         const query = '*[_type == "experiences"]';
         const skillsQuery = '*[_type == "skills"]';
+        
 
         client.fetch(query)
             .then((data) => {
@@ -82,8 +85,12 @@ const Skills = () => {
                         </motion.div>
                         </motion.div>
                     ))}
+                    
                 </div>
+                
+                
             </div>
+            
         </>
     )
 }

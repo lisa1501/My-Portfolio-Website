@@ -21,6 +21,11 @@ export default{
             hotspot: true,
             },
         },
+        {
+            name: 'imgLink',
+            title: 'ImgLink',
+            type: 'string',
+        },
         
     ]
 }
