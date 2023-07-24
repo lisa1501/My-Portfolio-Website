@@ -99,8 +99,8 @@ const Skills = () => {
                         </motion.div>
                         </motion.div>
                     ))}
-                    <div>
-                    <motion.div className='app__certificate-list'>
+                  
+                    {/* <motion.div className='app__certificate-list'>
                     {abouts.map((about,index)=>(
                         <motion.div 
                         whileInView={{ opacity:1}}
@@ -114,14 +114,35 @@ const Skills = () => {
                         <h4 className="bold-text" style={{ marginTop:20 }} >{about.title}</h4>
                         </motion.div>
                     ))}
-                </motion.div>
+                </motion.div> */}
+                        <motion.div
+                            className="app__certs-list"
+                        >
+                            {abouts.map((about,index)=>(
+                                <motion.div
+                                    whileInView={{opacity:1}}
+                                    whileHover={{ scale:1.1,  borderRadius: '15px'}}
+                                    transition={{duration:0.5}}
+                                    className="app__certs-item app__flex"
+                                    key={about.title+index}
+                                    onClick={onClickUrl(about.imgLink)}
+                                >
+                                    
+                                        <div className='app__flex' style={{backgroundColor: 'white'}}> 
+                                            <img src={urlFor(about.imgUrl)} alt={about.title}  />
+                                        </div>
+                                            <p className="bold-text" >{about.title}</p>
+                                </motion.div>
+                                
+                            ))}
+                        </motion.div>
                     </div>
                     
                     
                 </div>
                 
     
-            </div>
+           
             
         </>
     )
