@@ -12,13 +12,22 @@ const Skills = () => {
 
     const [experiences, setExperiences] = useState([]);
     const [skills, setSkills] = useState([]);
+    const [abouts, setAbouts] = useState([]);
+    const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
+    const onClickUrl = (url) => {
+        return () => openInNewTab(url)
+    }
+    
 
 
 
     useEffect(() =>{
         const query = '*[_type == "experiences"]';
         const skillsQuery = '*[_type == "skills"]';
-        
+        const aboutsQuery = '*[_type == "abouts"]';
 
         client.fetch(query)
             .then((data) => {
@@ -29,6 +38,11 @@ const Skills = () => {
             .then((data) => {
                 setSkills(data);
             })
+        client.fetch(aboutsQuery)
+            .then((data) => {
+                setAbouts(data);
+            })
+        
     },[])
     return (
         <>
@@ -85,10 +99,28 @@ const Skills = () => {
                         </motion.div>
                         </motion.div>
                     ))}
+                    <div>
+                    <motion.div className='app__certificate-list'>
+                    {abouts.map((about,index)=>(
+                        <motion.div 
+                        whileInView={{ opacity:1}}
+                        whileHover={{ scale:1.1,  borderRadius: '15px'}}
+                        transition={{ duration:0.5, type:"tween" }}
+                        className="app__certificate-item app__flex"
+                        key={about.title+index}
+                        onClick={onClickUrl(about.imgLink)}
+                    >
+                        <img src={urlFor(about.imgUrl)} alt={about.title}  />
+                        <h4 className="bold-text" style={{ marginTop:20 }} >{about.title}</h4>
+                        </motion.div>
+                    ))}
+                </motion.div>
+                    </div>
+                    
                     
                 </div>
                 
-                
+    
             </div>
             
         </>

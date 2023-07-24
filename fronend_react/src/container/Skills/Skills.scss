@@ -80,7 +80,15 @@
         }
     }
 }
+.app__certificate-list{
+    grid-column-gap: 1px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 
+}
+.app__certificate-item{
+    
+}
 .app__skills-exp {
     flex: 1;
     display: flex;

@@ -42,7 +42,7 @@ const Work = () => {
         <>
             <h2 className='head-text'> <span>My Technical Projects</span></h2>
             <div className='app__work-filter'>
-                {['UI/UX', 'Web App', 'Mobile App','All'].map((item,index) =>(
+                {[ 'Web App', 'Clone App','Game App','All'].map((item,index) =>(
                     <div
                         key={index}
                         onClick={() => handleWorkFilter(item)}
@@ -109,6 +109,6 @@ const Work = () => {
 
 export default AppWrap(
     MotionWrap(Work,'app__works'),
-        'work',
+        'projects',
         'app__primarybg'
         );

@@ -1,8 +1,6 @@
 import React from 'react';
 import {  BsLinkedin,BsGithub } from 'react-icons/bs';
 
-
-
 const SocialMedia = () => {
     const openInNewTab = (url) => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
@@ -19,10 +17,8 @@ const SocialMedia = () => {
             
             <div>
                 <BsGithub onClick={onClickUrl('https://github.com/lisa1501')}/>
-            </div>
-            
+            </div> 
         </div>
     )
 }
-
 export default SocialMedia
